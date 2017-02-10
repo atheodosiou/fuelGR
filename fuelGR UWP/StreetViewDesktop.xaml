@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="fuelGR_UWP.StreetViewDesktop"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:fuelGR_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#E9EBEE">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Background="#FF363636" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Width="30" Height="30" x:Name="logo" Grid.Column="0" Source="Assets/Logos/fuelGR-64x64.png"/>
+        </Grid>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="280"/>
+            </Grid.ColumnDefinitions>
+            <Grid Name="imageGrid" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="White" Grid.Column="1">
+                <Image Name="streetViewImage" Source="Assets/streetview_shell.jpg" Tapped="streetViewImage_Tapped"/>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{39659A9E-99AD-4F5C-ADE0-C2205C32629A}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fuelGR_UWP</RootNamespace>
+    <AssemblyName>fuelGR UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>fuelGR UWP_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>333DA076D1CB8A4515628336AF984CD4C97C3D6F</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="fuelGR UWP_StoreKey.pfx" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="DeviceTypeHelper.cs" />
+    <Compile Include="FuelStationPin.xaml.cs">
+      <DependentUpon>FuelStationPin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GasStation.cs" />
+    <Compile Include="InfoBoxDesktop.xaml.cs">
+      <DependentUpon>InfoBoxDesktop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoBox.xaml.cs">
+      <DependentUpon>InfoBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListItem.xaml.cs">
+      <DependentUpon>ListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListItemDesktop.xaml.cs">
+      <DependentUpon>ListItemDesktop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewPageDesktop.xaml.cs">
+      <DependentUpon>ListViewPageDesktop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewPageMobile.xaml.cs">
+      <DependentUpon>ListViewPageMobile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocationManager.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FuelCompany.cs" />
+    <Compile Include="NetworkConector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StreetViewDesktop.xaml.cs">
+      <DependentUpon>StreetViewDesktop.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="fuelGR UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\about-logo.jpg" />
+    <Content Include="Assets\InfoBox\Car -01.png" />
+    <Content Include="Assets\InfoBox\Form-01-WF.png" />
+    <Content Include="Assets\InfoBox\Location -01.png" />
+    <Content Include="Assets\InfoBox\Map-Location.png" />
+    <Content Include="Assets\InfoBox\Telephone -03.png" />
+    <Content Include="Assets\Logos\fuelGR-64x64.png" />
+    <Content Include="Assets\MapElements\locationMarker.png" />
+    <Content Include="Assets\no-image-available-348-228.jpg" />
+    <Content Include="Assets\no-image-available-800-400.jpg" />
+    <Content Include="Assets\PinLabels\infoBox.png" />
+    <Content Include="Assets\PinLabels\marker.png" />
+    <Content Include="Assets\PinLabels\marker_blue.png" />
+    <Content Include="Assets\PinLabels\marker_green.png" />
+    <Content Include="Assets\PinLabels\marker_red.png" />
+    <Content Include="Assets\Tiles-SplashScreen\Square150x150Logo.scale-100.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square150x150Logo.scale-125.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square150x150Logo.scale-150.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square150x150Logo.scale-200.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square150x150Logo.scale-400.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square44x44Logo.scale-100.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square44x44Logo.scale-200.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Square44x44Logo.scale-400.jpg" />
+    <Content Include="Assets\StationLogos\1.png" />
+    <Content Include="Assets\StationLogos\10.png" />
+    <Content Include="Assets\StationLogos\11.png" />
+    <Content Include="Assets\StationLogos\12.png" />
+    <Content Include="Assets\StationLogos\13.png" />
+    <Content Include="Assets\StationLogos\14.png" />
+    <Content Include="Assets\StationLogos\15.png" />
+    <Content Include="Assets\StationLogos\15b.png" />
+    <Content Include="Assets\StationLogos\16.png" />
+    <Content Include="Assets\StationLogos\17.png" />
+    <Content Include="Assets\StationLogos\17b.png" />
+    <Content Include="Assets\StationLogos\18.png" />
+    <Content Include="Assets\StationLogos\18b.png" />
+    <Content Include="Assets\StationLogos\19.png" />
+    <Content Include="Assets\StationLogos\1b.png" />
+    <Content Include="Assets\StationLogos\2.png" />
+    <Content Include="Assets\StationLogos\3.png" />
+    <Content Include="Assets\StationLogos\4.png" />
+    <Content Include="Assets\StationLogos\5.png" />
+    <Content Include="Assets\StationLogos\6.png" />
+    <Content Include="Assets\StationLogos\6b.png" />
+    <Content Include="Assets\StationLogos\7.png" />
+    <Content Include="Assets\StationLogos\8.png" />
+    <Content Include="Assets\StationLogos\9.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Tiles-SplashScreen\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Tiles-SplashScreen\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Tiles-SplashScreen\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Tiles-SplashScreen\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Tiles-SplashScreen\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Tiles-SplashScreen\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Tiles-SplashScreen\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Tiles-SplashScreen\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Tiles-SplashScreen\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Tiles-SplashScreen\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Tiles-SplashScreen\Wide310x150Logo.scale-100.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Wide310x150Logo.scale-125.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Wide310x150Logo.scale-150.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Wide310x150Logo.scale-200.jpg" />
+    <Content Include="Assets\Tiles-SplashScreen\Wide310x150Logo.scale-400.jpg" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FuelStationPin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoBoxDesktop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InfoBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListItemDesktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewPageDesktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewPageMobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StreetViewDesktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

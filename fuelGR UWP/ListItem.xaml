@@ -1,0 +1,79 @@
+﻿<UserControl
+    x:Class="fuelGR_UWP.ListItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:fuelGR_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="185"
+    d:DesignWidth="320">
+
+    <Grid Name="main_li_body" Background="white" BorderBrush="#FF0056D3" BorderThickness="1.5"
+          Margin="0,15,0,0" x:FieldModifier="public">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="320" Height="160"
+              Background="#FF0056D3">
+            <TextBlock Name="li_fuelType" Text="EKO Kinitron Unleaded 95 Plus"
+                    TextAlignment="Center" Foreground="White" 
+                       Margin="0,2,0,0" FontWeight="SemiBold" x:FieldModifier="public"/>
+        </Grid>
+        <Grid Grid.Row="1" Width="320" Height="auto" Background="Beige">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Height="30" Width="30" Grid.Row="0" Source="Assets/StationLogos/3.png"
+                   HorizontalAlignment="Right" Margin="0,0,5,0"
+                   x:FieldModifier="public" Name="li_logo"/>
+            <TextBlock Text="SHELL" Foreground="Black" Grid.Column="1"
+                       FontWeight="SemiBold" TextAlignment="Center"
+                       VerticalAlignment="Center" x:FieldModifier="public"
+                       Name="li_brand"/>
+            <TextBlock Text="1.539€" Foreground="#FF0056D3" Grid.Column="2"
+                       FontWeight="SemiBold" TextAlignment="Left"
+                       VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"
+                       x:FieldModifier="public" Name="li_price"/>
+        </Grid>
+        <Grid Grid.Row="2" Width="320" Height="auto" Background="#FFC7DEFF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Καταχωρήθηκε:" TextAlignment="Right"
+                       Grid.Column="0" Foreground="DarkBlue"
+                       Margin="0,3,2,0"/>
+            <TextBlock Text="2016-12-15 16:44" TextAlignment="Left"
+                       Grid.Column="1" Foreground="DarkBlue"
+                       Margin="2,3,0,0" x:FieldModifier="public"
+                       Name="li_date"/>
+        </Grid>
+        <Grid Grid.Row="3" Width="320" Height="auto" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="ΕΡΜΗΣ ΑΕΜΕΕ ΥΠ/ΜΑ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ 1"
+                       Grid.Row="0" FontSize="14" FontWeight="SemiBold"
+                       TextAlignment="Center" VerticalAlignment="Bottom"
+                       x:FieldModifier="public" Name="li_owner"/>
+            <TextBlock Text="ΛΕΩΦ ΔΗΜΟΚΡΑΤΙΑΣ 426, ΑΛΕΞ/ΠΟΛΗ"
+                       Grid.Row="1" FontSize="12" x:FieldModifier="public"
+                       TextAlignment="Center" VerticalAlignment="Top"
+                       Name="li_address"/>
+        </Grid>
+        <Grid Grid.Row="4" Width="320" Height="auto" Background="#FFC7DEFF">
+            <TextBlock Text="Απόσταση από πρατήριο: 3.7 km"
+                       Foreground="DarkBlue" TextAlignment="Center"
+                       Margin="0,0,0,0" x:FieldModifier="public"
+                       Name="li_distance"/>
+        </Grid>
+    </Grid>
+</UserControl>

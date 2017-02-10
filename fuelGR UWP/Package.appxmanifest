@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="779tasostheodosiou.fuelGRwindows10universal" Publisher="CN=5AD35A46-1E63-41DA-8175-AEBA29A9717A" Version="1.1.9.0" />
+  <mp:PhoneIdentity PhoneProductId="abb7e740-ddf9-4db2-a0e9-6788d9c119ac" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>fuelGR ( windows 10 universal )</DisplayName>
+    <PublisherDisplayName>tasos theodosiou</PublisherDisplayName>
+    <Logo>Assets\Tiles-SplashScreen\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="fuelGR_UWP.App">
+      <uap:VisualElements DisplayName="fuelGR" Description="fuelGR - A fuel monitoring app." BackgroundColor="transparent" Square150x150Logo="Assets\Tiles-SplashScreen\Square150x150Logo.jpg" Square44x44Logo="Assets\Tiles-SplashScreen\Square44x44Logo.jpg">
+        <uap:DefaultTile Wide310x150Logo="Assets\Tiles-SplashScreen\Wide310x150Logo.jpg">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\Tiles-SplashScreen\SplashScreen.png" BackgroundColor="transparent" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>
